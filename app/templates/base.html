@@ -9,11 +9,23 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <link rel="stylesheet" href="../static/css/main.css">
 <title>Kuda's Library</title>
+<style>
+body{
+    background-color: cornsilk;
+}
+nav{
+    background-color: cornsilk;
+}
+.list-unstyled{
+    text-decoration: none;
+    color: inherit;
+}
+</style>
 </head>
 <body>
-<nav class="navbar navbar-expand navbar-secondary text-light navbar-fixed-top" style="background:secondary;">
+<nav class="navbar navbar-expand text-dark navbar-fixed-top" style="text-decoration: none;">
     <a class="navbar-brand" href="">Kuda's Library</a>
-    <ul class="navbar-nav mr-auto mt-6 mt-lg-6">
+    <ul class="list-unstyled navbar-nav mr-auto mt-6 mt-lg-6">
         <li class="nav-item active d-flex justify-content-end">
             <a class="nav-link" href="{{ url_for('site.home') }}">Home<span class="sr-only">(current)</span></a>
         </li>

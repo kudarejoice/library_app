@@ -4,6 +4,9 @@
 <head>
 <link rel="stylesheet" href="/app/static/css/main.css">
 <style>
+*{
+    align-items:center;
+}
 .container {
     position: relative;
     background-image: url('/app/static/images/account.png');
@@ -23,14 +26,13 @@ h2{
 }
 li{
     font-size: 32px;
-    color: rgb(0, 0, 0);
 }
 </style>
 </head>
-<section class="bg-light text-dark text-center">
-    <div class="container bg-light">
+<section class="text-dark text-center">
+    <div class="container">
         <div class="row">
-            <div class="d-flex bg-light align-items-center justify-content-center">
+            <div class="d-flex align-items-center justify-content-center">
                 <h1 class="col text-center"> {{ current_user.email }}'s profile </h1>
             </div>
         </div>
