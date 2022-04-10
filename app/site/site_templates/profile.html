@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<head>
+<link rel="stylesheet" href="/app/static/css/main.css">
+<style>
+.container {
+    position: relative;
+    background-image: url('/app/static/images/account.png');
+}
+.center{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+}
+.list-group-item-action{
+    text-decoration: none;
+    list-style-type: none;
+}
+h2{
+    font-size: 48px;
+}
+li{
+    font-size: 32px;
+    color: rgb(0, 0, 0);
+}
+</style>
+</head>
+<section class="bg-light text-dark text-center">
+    <div class="container bg-light">
+        <div class="row">
+            <div class="d-flex bg-light align-items-center justify-content-center">
+                <h1 class="col text-center"> {{ current_user.email }}'s profile </h1>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="text-center">
+    <div class="container">
+            <div class="col-3 p-10">
+                <img style="opacity: 0.4; width: 100%; height: auto;"src="static/images/account.png" alt="An Icon of a cartoon profile account."><br><a href='https://www.freepik.com/vectors/user-account'>User account vector created by storyset - www.freepik.com</a>
+            </div>
+        <div class="text center row">
+            <h2>Your Profile Details</h2>
+          
+            <ul>
+                <li class="list-group-item-action list-group-item-light">Email: {{ current_user.email }}</li>
+                <li class="list-group-item-action list-group-item-light">Token: {{ current_user.token }}</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
